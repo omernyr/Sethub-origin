@@ -1,0 +1,20 @@
+PODS:
+  - AMPopTip (4.10.0)
+  - TTGTagCollectionView (2.4.2)
+
+DEPENDENCIES:
+  - AMPopTip
+  - TTGTagCollectionView
+
+SPEC REPOS:
+  trunk:
+    - AMPopTip
+    - TTGTagCollectionView
+
+SPEC CHECKSUMS:
+  AMPopTip: 4630471652faf06872f72a39bfcb6f5b68a7e208
+  TTGTagCollectionView: 0d4625aaf7ee3ad755c39d549368a4ce69bd17d1
+
+PODFILE CHECKSUM: a5af16472eadb803357604cf4ce09efe29cf44fe
+
+COCOAPODS: 1.11.3

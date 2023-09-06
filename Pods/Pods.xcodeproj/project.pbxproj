@@ -1,0 +1,857 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10A2175FFC32FB68FF3E71BAADA765E5 /* TTGTextTagAttributedStringContent.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1AF605AAAE775C841D608798351F51 /* TTGTextTagAttributedStringContent.m */; };
+		146E9FA66D8A55CCD9E7A89DB40FADD6 /* TTGTagCollectionView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B984AE8F6DAE6A04054137A11EA49DE1 /* TTGTagCollectionView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FC9E4050EB7749949E19A0678CA0A87 /* TTGTextTagStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 96E784D155C46371F4ACF67DD1CF622E /* TTGTextTagStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C6B934D837785259E680FD93F5C5741 /* TTGTextTagStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 243C5315AC2E460B55BC42F3F0E1A84A /* TTGTextTagStyle.m */; };
+		35182F0A255EE8DB751B913A3D85B3E4 /* PopTip+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2815548F9C70C298474A783DAD0EAB7 /* PopTip+Transitions.swift */; };
+		39AF39DD3144702AF34A3FE2B7B5D6E0 /* TTGTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13864EFA3C76A52765F779105560FF69 /* TTGTagCollectionView.m */; };
+		3E9737DEE7A16B02C7F808239AF99C94 /* AMPopTip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CE31CE84BC25FE1C4C6A414261E00C8 /* AMPopTip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		408FCE218B25F440E10D4A7EB4A3EDE2 /* TTGTagCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E33BFD8A9394BE188267ABA1280D374 /* TTGTagCollectionView-dummy.m */; };
+		4AC654FE7310099512B0BC69400041D9 /* TTGTextTagStringContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1706B513B0A50E782214F3824A355 /* TTGTextTagStringContent.m */; };
+		503140F95A90B833EB88EE59E1CF51B8 /* TTGTextTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FAF0CF6AB3FCC8F2DB9A417C1FDC52F /* TTGTextTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B6944E076027C33A08ED451345457DE /* TTGTextTagStringContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BAF4AE725593FD351322C85E66B9F63 /* TTGTextTagStringContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62028097466A11B5E7140579ADED2E40 /* Pods-Sethub-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBA6CF90A8EF7CC82AAF537556E821F /* Pods-Sethub-dummy.m */; };
+		7E6F5C355E3A24A61494C6B6652C4C9E /* TTGTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BC338C618A6745B2F7BC91A36125001 /* TTGTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8134506050F9ECF5AA0F64BC8971F84D /* AMPopTip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C6D8DC325A8E13CE2BFCE6C358F632 /* AMPopTip-dummy.m */; };
+		8CB779F93023DDE9B418AEA62541D3FA /* TTGTextTagContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 224EF7E851DE08F9629404FA82191B2A /* TTGTextTagContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93BC1E436E5478EEE85A670E8190443A /* Pods-Sethub-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1EB6BBEB09AF2599545B239E526EE05 /* Pods-Sethub-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D53C5B43854B0B3D096EFAC66B06270 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A45B261CD47CEE5CAA771CC63F2685F7 /* PopTip+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3355D4A85AD55317EF9A105D91DC5EA7 /* PopTip+Draw.swift */; };
+		ADE42A4126B82494B773E1EF309781A8 /* TTGTextTag.h in Headers */ = {isa = PBXBuildFile; fileRef = AF867F3CA65BD7186D442AF4C619BEFC /* TTGTextTag.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE4587BFFFD57C836559E7BBAF52C24B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		BB7688BEC17FF0772F12E0C211FE9293 /* TTGTextTagAttributedStringContent.h in Headers */ = {isa = PBXBuildFile; fileRef = C42916611AEE15E5E71781DE0EF2F66C /* TTGTextTagAttributedStringContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC7105F41ED9698A54F6302038BF7B71 /* TTGTextTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 789D1B868E7B7316DEB6C000B76979FB /* TTGTextTag.m */; };
+		DBC27A3BA5551A00C3BB06E0CC9AF642 /* TTGTextTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3748B8992FEFF2EA73A67F0F0F5551E3 /* TTGTextTagCollectionView.m */; };
+		E3947B1F2C052B2181B8B61077655B11 /* PopTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FFE22524BAD70392E1A6A683B3128 /* PopTip.swift */; };
+		EB51A41587E6BD487011DB89B1EEE877 /* TTGTagCollectionView-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AD36536A7CF2CA2A3EE868B6A6167F5 /* TTGTagCollectionView-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBBDD6E6A128CD769399E1F128934020 /* TTGTextTagContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACED466C8B4D0B2C95C4141AEBED3BF /* TTGTextTagContent.m */; };
+		EF51859B1BC3AD49E1478FAB5457064D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64DCEE54DA5ECF5986452C29037D78A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B974B55B3C5F71E53DF6070DC0CF6CF;
+			remoteInfo = AMPopTip;
+		};
+		C965A844663459EE693CFF63509E2A7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4949B35B65C78C4D7DCBEEA66EC61D4;
+			remoteInfo = TTGTagCollectionView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BAF4AE725593FD351322C85E66B9F63 /* TTGTextTagStringContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTagStringContent.h; path = Sources/TTGTextTagStringContent.h; sourceTree = "<group>"; };
+		10B13B83DFEF8DFE8767FCF080DA2742 /* AMPopTip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AMPopTip.modulemap; sourceTree = "<group>"; };
+		13864EFA3C76A52765F779105560FF69 /* TTGTagCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTagCollectionView.m; path = Sources/TTGTagCollectionView.m; sourceTree = "<group>"; };
+		1FAF0CF6AB3FCC8F2DB9A417C1FDC52F /* TTGTextTagCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTagCollectionView.h; path = Sources/TTGTextTagCollectionView.h; sourceTree = "<group>"; };
+		20F3F72DDB735AC56FC3164CC70C4C2E /* Pods-Sethub */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Sethub"; path = Pods_Sethub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		224EF7E851DE08F9629404FA82191B2A /* TTGTextTagContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTagContent.h; path = Sources/TTGTextTagContent.h; sourceTree = "<group>"; };
+		243C5315AC2E460B55BC42F3F0E1A84A /* TTGTextTagStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTagStyle.m; path = Sources/TTGTextTagStyle.m; sourceTree = "<group>"; };
+		259BDC2765BE6100E20116935A76643E /* TTGTagCollectionView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TTGTagCollectionView.modulemap; sourceTree = "<group>"; };
+		3355D4A85AD55317EF9A105D91DC5EA7 /* PopTip+Draw.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PopTip+Draw.swift"; path = "Source/PopTip+Draw.swift"; sourceTree = "<group>"; };
+		36C6F0DD9B00CD62109C2D53724C22F7 /* TTGTagCollectionView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TTGTagCollectionView; path = TTGTags.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3748B8992FEFF2EA73A67F0F0F5551E3 /* TTGTextTagCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTagCollectionView.m; path = Sources/TTGTextTagCollectionView.m; sourceTree = "<group>"; };
+		4ACED466C8B4D0B2C95C4141AEBED3BF /* TTGTextTagContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTagContent.m; path = Sources/TTGTextTagContent.m; sourceTree = "<group>"; };
+		4B9D9D9CDEB7DCBA7E6A3EE1FB626A4B /* Pods-Sethub-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sethub-acknowledgements.markdown"; sourceTree = "<group>"; };
+		539B2B5FE80F6DE861FECD071B71ED32 /* TTGTagCollectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTGTagCollectionView.debug.xcconfig; sourceTree = "<group>"; };
+		55F558649D99B908B8724A1E7BE52EE7 /* Pods-Sethub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sethub.debug.xcconfig"; sourceTree = "<group>"; };
+		55F8251312A0A66ACA6D93A2585341C8 /* Pods-Sethub-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sethub-acknowledgements.plist"; sourceTree = "<group>"; };
+		5B4E7EDDB3DB6E299A7DAE1D35E0BF3E /* TTGTagCollectionView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TTGTagCollectionView-Info.plist"; sourceTree = "<group>"; };
+		5E33BFD8A9394BE188267ABA1280D374 /* TTGTagCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTGTagCollectionView-dummy.m"; sourceTree = "<group>"; };
+		5F000488CFDC1E8738867EDF0F0534E6 /* AMPopTip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AMPopTip.debug.xcconfig; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		789D1B868E7B7316DEB6C000B76979FB /* TTGTextTag.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTag.m; path = Sources/TTGTextTag.m; sourceTree = "<group>"; };
+		7BEF9958D3AC092C2ABFCE6857208322 /* AMPopTip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AMPopTip-Info.plist"; sourceTree = "<group>"; };
+		7CE31CE84BC25FE1C4C6A414261E00C8 /* AMPopTip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMPopTip-umbrella.h"; sourceTree = "<group>"; };
+		840FFE22524BAD70392E1A6A683B3128 /* PopTip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopTip.swift; path = Source/PopTip.swift; sourceTree = "<group>"; };
+		8AD36536A7CF2CA2A3EE868B6A6167F5 /* TTGTagCollectionView-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TTGTagCollectionView-Bridging-Header.h"; path = "Sources/TTGTagCollectionView-Bridging-Header.h"; sourceTree = "<group>"; };
+		8B2CA4AE01B815CC0058E0923B44A072 /* Pods-Sethub.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Sethub.modulemap"; sourceTree = "<group>"; };
+		8BC338C618A6745B2F7BC91A36125001 /* TTGTagCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTagCollectionView.h; path = Sources/TTGTagCollectionView.h; sourceTree = "<group>"; };
+		8C95D72193B8B0961AE8D60FA1D3F419 /* AMPopTip */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AMPopTip; path = AMPopTip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DF1706B513B0A50E782214F3824A355 /* TTGTextTagStringContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTagStringContent.m; path = Sources/TTGTextTagStringContent.m; sourceTree = "<group>"; };
+		90E5C173DE33F789886068302E4ABAFB /* TTGTagCollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTGTagCollectionView.release.xcconfig; sourceTree = "<group>"; };
+		92C6D8DC325A8E13CE2BFCE6C358F632 /* AMPopTip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AMPopTip-dummy.m"; sourceTree = "<group>"; };
+		9392F2D09862B336B1BA2441BCA943A9 /* Pods-Sethub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sethub.release.xcconfig"; sourceTree = "<group>"; };
+		96E784D155C46371F4ACF67DD1CF622E /* TTGTextTagStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTagStyle.h; path = Sources/TTGTextTagStyle.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ADE4FF214C705AB19F47564362B26FD7 /* AMPopTip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AMPopTip.release.xcconfig; sourceTree = "<group>"; };
+		AF867F3CA65BD7186D442AF4C619BEFC /* TTGTextTag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTag.h; path = Sources/TTGTextTag.h; sourceTree = "<group>"; };
+		B984AE8F6DAE6A04054137A11EA49DE1 /* TTGTagCollectionView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTGTagCollectionView-umbrella.h"; sourceTree = "<group>"; };
+		C2353946AFC4B8049A6D56F9545D52FE /* AMPopTip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMPopTip-prefix.pch"; sourceTree = "<group>"; };
+		C42916611AEE15E5E71781DE0EF2F66C /* TTGTextTagAttributedStringContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTGTextTagAttributedStringContent.h; path = Sources/TTGTextTagAttributedStringContent.h; sourceTree = "<group>"; };
+		CA2FD000887CFAE03F38812BB0627CEF /* Pods-Sethub-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sethub-frameworks.sh"; sourceTree = "<group>"; };
+		E572219378FD0A4E40863E2DBC018C9C /* Pods-Sethub-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sethub-Info.plist"; sourceTree = "<group>"; };
+		EB09A84D4075C35632E5F785482D01A7 /* TTGTagCollectionView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTGTagCollectionView-prefix.pch"; sourceTree = "<group>"; };
+		F1EB6BBEB09AF2599545B239E526EE05 /* Pods-Sethub-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sethub-umbrella.h"; sourceTree = "<group>"; };
+		F2815548F9C70C298474A783DAD0EAB7 /* PopTip+Transitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PopTip+Transitions.swift"; path = "Source/PopTip+Transitions.swift"; sourceTree = "<group>"; };
+		FBBA6CF90A8EF7CC82AAF537556E821F /* Pods-Sethub-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sethub-dummy.m"; sourceTree = "<group>"; };
+		FC1AF605AAAE775C841D608798351F51 /* TTGTextTagAttributedStringContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTGTextTagAttributedStringContent.m; path = Sources/TTGTextTagAttributedStringContent.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		581B9E4103C730C1F78A5C7396BD86D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D53C5B43854B0B3D096EFAC66B06270 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C9DC8624363E6F2C5829E4D3961197 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF51859B1BC3AD49E1478FAB5457064D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8EB5E493DDF947D3AB9F290A7BAF23D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE4587BFFFD57C836559E7BBAF52C24B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BF3C43D9922BCEEEE73A0DD8A23DC07 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				10B13B83DFEF8DFE8767FCF080DA2742 /* AMPopTip.modulemap */,
+				92C6D8DC325A8E13CE2BFCE6C358F632 /* AMPopTip-dummy.m */,
+				7BEF9958D3AC092C2ABFCE6857208322 /* AMPopTip-Info.plist */,
+				C2353946AFC4B8049A6D56F9545D52FE /* AMPopTip-prefix.pch */,
+				7CE31CE84BC25FE1C4C6A414261E00C8 /* AMPopTip-umbrella.h */,
+				5F000488CFDC1E8738867EDF0F0534E6 /* AMPopTip.debug.xcconfig */,
+				ADE4FF214C705AB19F47564362B26FD7 /* AMPopTip.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AMPopTip";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		581DD11F5EB121DA382C1449B8B80C53 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				259BDC2765BE6100E20116935A76643E /* TTGTagCollectionView.modulemap */,
+				5E33BFD8A9394BE188267ABA1280D374 /* TTGTagCollectionView-dummy.m */,
+				5B4E7EDDB3DB6E299A7DAE1D35E0BF3E /* TTGTagCollectionView-Info.plist */,
+				EB09A84D4075C35632E5F785482D01A7 /* TTGTagCollectionView-prefix.pch */,
+				B984AE8F6DAE6A04054137A11EA49DE1 /* TTGTagCollectionView-umbrella.h */,
+				539B2B5FE80F6DE861FECD071B71ED32 /* TTGTagCollectionView.debug.xcconfig */,
+				90E5C173DE33F789886068302E4ABAFB /* TTGTagCollectionView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TTGTagCollectionView";
+			sourceTree = "<group>";
+		};
+		A0003EAC196DA4949F15CD9B28337FAE /* TTGTagCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				8BC338C618A6745B2F7BC91A36125001 /* TTGTagCollectionView.h */,
+				13864EFA3C76A52765F779105560FF69 /* TTGTagCollectionView.m */,
+				8AD36536A7CF2CA2A3EE868B6A6167F5 /* TTGTagCollectionView-Bridging-Header.h */,
+				AF867F3CA65BD7186D442AF4C619BEFC /* TTGTextTag.h */,
+				789D1B868E7B7316DEB6C000B76979FB /* TTGTextTag.m */,
+				C42916611AEE15E5E71781DE0EF2F66C /* TTGTextTagAttributedStringContent.h */,
+				FC1AF605AAAE775C841D608798351F51 /* TTGTextTagAttributedStringContent.m */,
+				1FAF0CF6AB3FCC8F2DB9A417C1FDC52F /* TTGTextTagCollectionView.h */,
+				3748B8992FEFF2EA73A67F0F0F5551E3 /* TTGTextTagCollectionView.m */,
+				224EF7E851DE08F9629404FA82191B2A /* TTGTextTagContent.h */,
+				4ACED466C8B4D0B2C95C4141AEBED3BF /* TTGTextTagContent.m */,
+				0BAF4AE725593FD351322C85E66B9F63 /* TTGTextTagStringContent.h */,
+				8DF1706B513B0A50E782214F3824A355 /* TTGTextTagStringContent.m */,
+				96E784D155C46371F4ACF67DD1CF622E /* TTGTextTagStyle.h */,
+				243C5315AC2E460B55BC42F3F0E1A84A /* TTGTextTagStyle.m */,
+				581DD11F5EB121DA382C1449B8B80C53 /* Support Files */,
+			);
+			name = TTGTagCollectionView;
+			path = TTGTagCollectionView;
+			sourceTree = "<group>";
+		};
+		A0EF7F2B34A9AE8B17E509F3F215EB8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A59B19DEF4550990BBBA718F4FDDB1C7 /* AMPopTip */,
+				A0003EAC196DA4949F15CD9B28337FAE /* TTGTagCollectionView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A59B19DEF4550990BBBA718F4FDDB1C7 /* AMPopTip */ = {
+			isa = PBXGroup;
+			children = (
+				840FFE22524BAD70392E1A6A683B3128 /* PopTip.swift */,
+				3355D4A85AD55317EF9A105D91DC5EA7 /* PopTip+Draw.swift */,
+				F2815548F9C70C298474A783DAD0EAB7 /* PopTip+Transitions.swift */,
+				4BF3C43D9922BCEEEE73A0DD8A23DC07 /* Support Files */,
+			);
+			name = AMPopTip;
+			path = AMPopTip;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				A0EF7F2B34A9AE8B17E509F3F215EB8E /* Pods */,
+				FBB78A154B9E9B1A7B5BC5A8C18DD0DC /* Products */,
+				E624B9D06F51D624634699116DB2D748 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD2964F5CE6614836E46A3878FF0F185 /* Pods-Sethub */ = {
+			isa = PBXGroup;
+			children = (
+				8B2CA4AE01B815CC0058E0923B44A072 /* Pods-Sethub.modulemap */,
+				4B9D9D9CDEB7DCBA7E6A3EE1FB626A4B /* Pods-Sethub-acknowledgements.markdown */,
+				55F8251312A0A66ACA6D93A2585341C8 /* Pods-Sethub-acknowledgements.plist */,
+				FBBA6CF90A8EF7CC82AAF537556E821F /* Pods-Sethub-dummy.m */,
+				CA2FD000887CFAE03F38812BB0627CEF /* Pods-Sethub-frameworks.sh */,
+				E572219378FD0A4E40863E2DBC018C9C /* Pods-Sethub-Info.plist */,
+				F1EB6BBEB09AF2599545B239E526EE05 /* Pods-Sethub-umbrella.h */,
+				55F558649D99B908B8724A1E7BE52EE7 /* Pods-Sethub.debug.xcconfig */,
+				9392F2D09862B336B1BA2441BCA943A9 /* Pods-Sethub.release.xcconfig */,
+			);
+			name = "Pods-Sethub";
+			path = "Target Support Files/Pods-Sethub";
+			sourceTree = "<group>";
+		};
+		E624B9D06F51D624634699116DB2D748 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD2964F5CE6614836E46A3878FF0F185 /* Pods-Sethub */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FBB78A154B9E9B1A7B5BC5A8C18DD0DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C95D72193B8B0961AE8D60FA1D3F419 /* AMPopTip */,
+				20F3F72DDB735AC56FC3164CC70C4C2E /* Pods-Sethub */,
+				36C6F0DD9B00CD62109C2D53724C22F7 /* TTGTagCollectionView */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B4E64C361C8BDCF5BDCF2F2A6A9299A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93BC1E436E5478EEE85A670E8190443A /* Pods-Sethub-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C23DC1D8354ECB5ABB8665FC85C91A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E6F5C355E3A24A61494C6B6652C4C9E /* TTGTagCollectionView.h in Headers */,
+				EB51A41587E6BD487011DB89B1EEE877 /* TTGTagCollectionView-Bridging-Header.h in Headers */,
+				146E9FA66D8A55CCD9E7A89DB40FADD6 /* TTGTagCollectionView-umbrella.h in Headers */,
+				ADE42A4126B82494B773E1EF309781A8 /* TTGTextTag.h in Headers */,
+				BB7688BEC17FF0772F12E0C211FE9293 /* TTGTextTagAttributedStringContent.h in Headers */,
+				503140F95A90B833EB88EE59E1CF51B8 /* TTGTextTagCollectionView.h in Headers */,
+				8CB779F93023DDE9B418AEA62541D3FA /* TTGTextTagContent.h in Headers */,
+				5B6944E076027C33A08ED451345457DE /* TTGTextTagStringContent.h in Headers */,
+				1FC9E4050EB7749949E19A0678CA0A87 /* TTGTextTagStyle.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E42A7B073DB33DEE7944F7A4C5A98D78 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E9737DEE7A16B02C7F808239AF99C94 /* AMPopTip-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0B974B55B3C5F71E53DF6070DC0CF6CF /* AMPopTip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8FBFC8847DBB421479AA9429C09C3EC /* Build configuration list for PBXNativeTarget "AMPopTip" */;
+			buildPhases = (
+				E42A7B073DB33DEE7944F7A4C5A98D78 /* Headers */,
+				8CACDCFB3ECD5943D15EECA9ADEBD752 /* Sources */,
+				A6C9DC8624363E6F2C5829E4D3961197 /* Frameworks */,
+				C65EDAD18BB1BBB7B4C768AEA237CEB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AMPopTip;
+			productName = AMPopTip;
+			productReference = 8C95D72193B8B0961AE8D60FA1D3F419 /* AMPopTip */;
+			productType = "com.apple.product-type.framework";
+		};
+		ACEEDE351B859E773595BB37D0A82190 /* Pods-Sethub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47BDF5694CF481DF3D4FB70E6E59D832 /* Build configuration list for PBXNativeTarget "Pods-Sethub" */;
+			buildPhases = (
+				B4E64C361C8BDCF5BDCF2F2A6A9299A2 /* Headers */,
+				4E9FF809C77ECFF456FD697CDDBE22DD /* Sources */,
+				581B9E4103C730C1F78A5C7396BD86D8 /* Frameworks */,
+				83567E84F4D90FC058EFB8696BE37DD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43999F40F8E43516D84235A677D1A69C /* PBXTargetDependency */,
+				6BB14A690D64E94CAAD6ED1ADAE40969 /* PBXTargetDependency */,
+			);
+			name = "Pods-Sethub";
+			productName = Pods_Sethub;
+			productReference = 20F3F72DDB735AC56FC3164CC70C4C2E /* Pods-Sethub */;
+			productType = "com.apple.product-type.framework";
+		};
+		F4949B35B65C78C4D7DCBEEA66EC61D4 /* TTGTagCollectionView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F02EFB3BE04BFE1134209F4719E0ED0C /* Build configuration list for PBXNativeTarget "TTGTagCollectionView" */;
+			buildPhases = (
+				B5C23DC1D8354ECB5ABB8665FC85C91A /* Headers */,
+				86DA8F7D8CC97F095FE57CF06A091CEF /* Sources */,
+				D8EB5E493DDF947D3AB9F290A7BAF23D /* Frameworks */,
+				69BC7F1C7F48C04C2C2649C73E90D67B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTGTagCollectionView;
+			productName = TTGTags;
+			productReference = 36C6F0DD9B00CD62109C2D53724C22F7 /* TTGTagCollectionView */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = FBB78A154B9E9B1A7B5BC5A8C18DD0DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B974B55B3C5F71E53DF6070DC0CF6CF /* AMPopTip */,
+				ACEEDE351B859E773595BB37D0A82190 /* Pods-Sethub */,
+				F4949B35B65C78C4D7DCBEEA66EC61D4 /* TTGTagCollectionView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69BC7F1C7F48C04C2C2649C73E90D67B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83567E84F4D90FC058EFB8696BE37DD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65EDAD18BB1BBB7B4C768AEA237CEB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E9FF809C77ECFF456FD697CDDBE22DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62028097466A11B5E7140579ADED2E40 /* Pods-Sethub-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86DA8F7D8CC97F095FE57CF06A091CEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39AF39DD3144702AF34A3FE2B7B5D6E0 /* TTGTagCollectionView.m in Sources */,
+				408FCE218B25F440E10D4A7EB4A3EDE2 /* TTGTagCollectionView-dummy.m in Sources */,
+				CC7105F41ED9698A54F6302038BF7B71 /* TTGTextTag.m in Sources */,
+				10A2175FFC32FB68FF3E71BAADA765E5 /* TTGTextTagAttributedStringContent.m in Sources */,
+				DBC27A3BA5551A00C3BB06E0CC9AF642 /* TTGTextTagCollectionView.m in Sources */,
+				EBBDD6E6A128CD769399E1F128934020 /* TTGTextTagContent.m in Sources */,
+				4AC654FE7310099512B0BC69400041D9 /* TTGTextTagStringContent.m in Sources */,
+				2C6B934D837785259E680FD93F5C5741 /* TTGTextTagStyle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CACDCFB3ECD5943D15EECA9ADEBD752 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8134506050F9ECF5AA0F64BC8971F84D /* AMPopTip-dummy.m in Sources */,
+				E3947B1F2C052B2181B8B61077655B11 /* PopTip.swift in Sources */,
+				A45B261CD47CEE5CAA771CC63F2685F7 /* PopTip+Draw.swift in Sources */,
+				35182F0A255EE8DB751B913A3D85B3E4 /* PopTip+Transitions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43999F40F8E43516D84235A677D1A69C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AMPopTip;
+			target = 0B974B55B3C5F71E53DF6070DC0CF6CF /* AMPopTip */;
+			targetProxy = 64DCEE54DA5ECF5986452C29037D78A7 /* PBXContainerItemProxy */;
+		};
+		6BB14A690D64E94CAAD6ED1ADAE40969 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTGTagCollectionView;
+			target = F4949B35B65C78C4D7DCBEEA66EC61D4 /* TTGTagCollectionView */;
+			targetProxy = C965A844663459EE693CFF63509E2A7F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1529ABC11D4DA7528E6825A4514F8FD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9392F2D09862B336B1BA2441BCA943A9 /* Pods-Sethub.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Sethub/Pods-Sethub-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sethub/Pods-Sethub.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1ABD0E3FC3941D17B48E694F0EB6D701 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F000488CFDC1E8738867EDF0F0534E6 /* AMPopTip.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AMPopTip/AMPopTip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AMPopTip/AMPopTip-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AMPopTip/AMPopTip.modulemap";
+				PRODUCT_MODULE_NAME = AMPopTip;
+				PRODUCT_NAME = AMPopTip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1CC1A22D08B294E9736A1227367AD925 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 539B2B5FE80F6DE861FECD071B71ED32 /* TTGTagCollectionView.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TTGTagCollectionView/TTGTagCollectionView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTGTagCollectionView/TTGTagCollectionView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TTGTagCollectionView/TTGTagCollectionView.modulemap";
+				PRODUCT_MODULE_NAME = TTGTags;
+				PRODUCT_NAME = TTGTags;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		28967F31445B2BCDCC3A826FCDA2E116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADE4FF214C705AB19F47564362B26FD7 /* AMPopTip.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AMPopTip/AMPopTip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AMPopTip/AMPopTip-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AMPopTip/AMPopTip.modulemap";
+				PRODUCT_MODULE_NAME = AMPopTip;
+				PRODUCT_NAME = AMPopTip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		980F429D8185500A62B9C6822763B11F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90E5C173DE33F789886068302E4ABAFB /* TTGTagCollectionView.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TTGTagCollectionView/TTGTagCollectionView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTGTagCollectionView/TTGTagCollectionView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TTGTagCollectionView/TTGTagCollectionView.modulemap";
+				PRODUCT_MODULE_NAME = TTGTags;
+				PRODUCT_NAME = TTGTags;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B3718BB437AA265CC259A35CEA094E3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F558649D99B908B8724A1E7BE52EE7 /* Pods-Sethub.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Sethub/Pods-Sethub-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sethub/Pods-Sethub.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47BDF5694CF481DF3D4FB70E6E59D832 /* Build configuration list for PBXNativeTarget "Pods-Sethub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3718BB437AA265CC259A35CEA094E3C /* Debug */,
+				1529ABC11D4DA7528E6825A4514F8FD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8FBFC8847DBB421479AA9429C09C3EC /* Build configuration list for PBXNativeTarget "AMPopTip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ABD0E3FC3941D17B48E694F0EB6D701 /* Debug */,
+				28967F31445B2BCDCC3A826FCDA2E116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F02EFB3BE04BFE1134209F4719E0ED0C /* Build configuration list for PBXNativeTarget "TTGTagCollectionView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CC1A22D08B294E9736A1227367AD925 /* Debug */,
+				980F429D8185500A62B9C6822763B11F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
