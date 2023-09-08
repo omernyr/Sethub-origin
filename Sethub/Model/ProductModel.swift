@@ -9,6 +9,7 @@ import Foundation
 
 struct UploadedPost: Codable {
     let userEmail: String
+    let id: String
     let imageURL: String
     let postDescription: String
     var prodAnnotations: [ImageAnnotation]
@@ -16,17 +17,20 @@ struct UploadedPost: Codable {
     let category: String // Kategori alanını ekleyin
     var likes: Int
     var isLiked: Bool
+    var isSaved: Bool
     
     // DictionaryRepresentation'ı ekleyin
     var dictionaryRepresentation: [String: Any] {
         var dict: [String: Any] = [
             "userEmail": userEmail,
+            "id": id,
             "imageURL": imageURL,
             "postDescription": postDescription,
             "category": category, // Kategori alanını ekleyin
             "date": date,
             "likes": likes,
-            "isLiked": isLiked
+            "isLiked": isLiked,
+            "isSaved": isSaved
         ]
         if !prodAnnotations.isEmpty {
             dict["prodAnnotations"] = prodAnnotations.map { $0.dictionaryRepresentation }
@@ -37,6 +41,7 @@ struct UploadedPost: Codable {
     // Codable için CodingKeys ekleyin
     enum CodingKeys: String, CodingKey {
         case userEmail
+        case id
         case imageURL
         case postDescription
         case prodAnnotations
@@ -44,6 +49,7 @@ struct UploadedPost: Codable {
         case date
         case likes
         case isLiked
+        case isSaved
     }
 }
 
@@ -96,35 +102,9 @@ struct Product: Codable {
     }
 }
 
-struct User: Codable {
-    let id: String
-    let username: String
-    var bio: String?
-    var profileImageURL: String?
-
-    // DictionaryRepresentation'ı ekleyin
-    var dictionaryRepresentation: [String: Any] {
-        var dictionary: [String: Any] = [
-            "id": id,
-            "username": username
-        ]
-        
-        if let bio = bio {
-            dictionary["bio"] = bio
-        }
-        
-        if let profileImageURL = profileImageURL {
-            dictionary["profileImageURL"] = profileImageURL
-        }
-        
-        return dictionary
-    }
-
-    // Codable için CodingKeys ekleyin
-    enum CodingKeys: String, CodingKey {
-        case id
-        case username
-        case bio
-        case profileImageURL
-    }
+struct User {
+    let name: String
+    let surname: String
+    let bio: String
+    let userProfileImageURL: String
 }

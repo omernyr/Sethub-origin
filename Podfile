@@ -6,6 +6,7 @@ target 'Sethub' do
   use_frameworks!
   pod 'AMPopTip'
   pod "TTGTagCollectionView"
+  pod 'Google-Mobile-Ads-SDK'
   # Pods for Sethub
 
 end

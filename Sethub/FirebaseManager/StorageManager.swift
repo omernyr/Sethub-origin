@@ -26,13 +26,13 @@ public class StorageManager {
     
     public func downloadImage(with reference: String, completion: @escaping (Result<URL, IGStorageManagerError>) -> Void) {
         storageReference.child(reference).downloadURL(completion: { url, error in
-            guard let url = url,
-                  error == nil else {
-                completion(.failure(.failedToDownload))
-                return
-                
-            }
-            let url2 = url
+//            guard let url = url,
+//                  error == nil else {
+//                completion(.failure(.failedToDownload))
+//                return
+//
+//            }
+            
         })
     }
     

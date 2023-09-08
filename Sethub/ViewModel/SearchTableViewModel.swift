@@ -37,6 +37,7 @@ final class SearchTableViewModel {
                 let data = document.data()
                 if let imageURL = data["imageURL"] as? String,
                    let email = data["userEmail"] as? String,
+                   let id = data["id"] as? String,
                    let postDescription = data["postDescription"] as? String,
                    let prodAnnotationsData = data["prodAnnotations"] as? [[String: Any]],
                    let category = data["category"] as? String,
@@ -59,8 +60,8 @@ final class SearchTableViewModel {
                     
 //                    UploadedPost(userEmail: email, imageURL: imageURL, postDescription: postDescription, prodAnnotations: prodAnnotations, date: date.dateValue(), category: category) // Timestamp'ı Date türüne çevirin
                     
-                    let uploadedPost = UploadedPost(userEmail: email,imageURL: imageURL,postDescription: postDescription, prodAnnotations: prodAnnotations,
-                                                    date: date.dateValue(), category: category, likes: 0, isLiked: false)
+                    let uploadedPost = UploadedPost(userEmail: email, id: id, imageURL: imageURL,postDescription: postDescription, prodAnnotations: prodAnnotations,
+                                                    date: date.dateValue(), category: category, likes: 0, isLiked: false, isSaved: false)
                     allPosts.append(uploadedPost)
                     
                     // Kategorileri ekleyin

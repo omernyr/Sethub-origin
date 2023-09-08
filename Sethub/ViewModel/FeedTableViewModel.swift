@@ -29,6 +29,7 @@ final class FeedTableViewModel {
                 let data = document.data()
                 if let imageURL = data["imageURL"] as? String,
                    let email = data["userEmail"] as? String,
+                   let id = data["id"] as? String,
                    let postDescription = data["postDescription"] as? String,
                    let prodAnnotationsData = data["prodAnnotations"] as? [[String: Any]],
                    let category = data["category"] as? String,
@@ -49,8 +50,8 @@ final class FeedTableViewModel {
                         }
                     }
                     
-                    let uploadedPost = UploadedPost(userEmail: email, imageURL: imageURL, postDescription: postDescription, prodAnnotations: prodAnnotations,
-                                                    date: date.dateValue(), category: category, likes: 3, isLiked: false)
+                    let uploadedPost = UploadedPost(userEmail: email, id: id, imageURL: imageURL, postDescription: postDescription, prodAnnotations: prodAnnotations,
+                                                    date: date.dateValue(), category: category, likes: 3, isLiked: false, isSaved: false)
                     
                     uploadedPosts.append(uploadedPost)
                 }

@@ -23,7 +23,7 @@ class CustomPopupView: UIView, UITextFieldDelegate {
         label.font = UIFont.systemFont(ofSize: 19, weight: .light)
         label.backgroundColor = .clear
         label.numberOfLines = 0
-        label.textColor = .systemGray2
+        label.textColor = .lightGray
         label.text = "Please enter the details of the product you want to share."
         return label
     }()
@@ -57,8 +57,11 @@ class CustomPopupView: UIView, UITextFieldDelegate {
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("Done", for: .normal)
         btn.setTitleColor(.init(hexString: "#ffcf46"), for: .normal)
-        btn.backgroundColor = .init(hexString: "#bb4a02")
+        btn.layer.masksToBounds = true
+        let colorss = [UIColor.init(hexString: "8e3802"), UIColor.init(hexString: "bb4a02")]
+        btn.setGradientBackgroundColors(colorss, direction: .toTop, for: .normal)
         btn.layer.cornerRadius = Constants.cornerRadius
+        btn.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
         return btn
     }()
     
@@ -132,7 +135,7 @@ class CustomPopupView: UIView, UITextFieldDelegate {
         doneButton.snp.makeConstraints { make in
             make.bottom.equalToSuperview().inset(20)
             make.width.equalToSuperview().inset(20)
-            make.height.equalTo(60)
+            make.height.equalTo(50)
             make.centerX.equalToSuperview()
         }
         

@@ -11,15 +11,13 @@ import FirebaseDatabase
 import FirebaseStorage
 import DTGradientButton
 import StoreKit
+import GoogleMobileAds
 
 class ProfileViewController: UIViewController {
-    
-    var post: UploadedPost? {
-        didSet {
-            setupUI()
-        }
-    }
-    
+
+    private var interstitial: GADInterstitialAd?
+    var bannerView: GADBannerView!
+
     // Components
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
@@ -36,6 +34,24 @@ class ProfileViewController: UIViewController {
         label.text = ""
         label.font = UIFont.systemFont(ofSize: 19, weight: .medium)
         label.textColor = .black
+        label.textAlignment = .center
+        return label
+    }()
+    
+    let surnameLabel: UILabel = {
+        let label = UILabel()
+        label.text = ""
+        label.font = UIFont.systemFont(ofSize: 19, weight: .medium)
+        label.textColor = .black
+        label.textAlignment = .center
+        return label
+    }()
+    
+    let userDescriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = ""
+        label.font = UIFont.systemFont(ofSize: 14, weight: .light)
+        label.textColor = .darkGray
         label.textAlignment = .center
         return label
     }()
@@ -115,8 +131,74 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID: "ca-app-pub-3940256099942544/4411468910",
+                               request: request,
+                               completionHandler: { [self] ad, error in
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            interstitial = ad
+        }
+        )
+        configureBannerAds()
         setupUI()
         setupLogoutButton()
+        fetchUserData()
+        NotificationCenter.default.addObserver(self, selector: #selector(handleProfileDataUpdated), name: Notification.Name("ProfileDataUpdated"), object: nil)
+    }
+    
+    @objc func handleProfileDataUpdated() {
+        // Verileri güncelle
+        fetchUserData()
+    }
+    
+    func fetchUserData() {
+        guard let currentUserUID = Auth.auth().currentUser?.uid else {
+            return
+        }
+
+        let db = Firestore.firestore()
+        let userRef = db.collection("users").document(currentUserUID)
+
+        userRef.getDocument { [weak self] (document, error) in
+            guard let document = document, document.exists, let data = document.data() else {
+                print("Kullanıcı verileri alınamadı veya belirtilen kullanıcı bulunamadı.")
+                return
+            }
+
+            // Firestore'dan alınan verileri çıkarın
+            if let data = document.data(),
+               let name = data["name"] as? String,
+               let surname = data["surname"] as? String,
+               let bio = data["bio"] as? String,
+               let userProfileImageURL = data["userProfileImageURL"] as? String {
+                let user = User(name: name, surname: surname, bio: bio, userProfileImageURL: userProfileImageURL)
+                self?.updateUI(with: user)
+            }
+
+        }
+        
+    }
+
+    private func updateUI(with user: User) {
+        // User yapısından gelen verileri kullanarak kullanıcı arayüzünü güncelle
+        self.usernameLabel.text = user.name
+        self.surnameLabel.text = user.surname
+        self.userDescriptionLabel.text = user.bio
+        self.profileImageView.sd_setImage(with: URL(string: user.userProfileImageURL))
+    }
+    
+    private func configureBannerAds() {
+        
+        // In this case, we instantiate the banner with desired ad size.
+        bannerView = GADBannerView(adSize: GADAdSizeBanner)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
+        addBannerViewToView(bannerView)
     }
     
     // MARK: - UI Setup
@@ -126,12 +208,15 @@ class ProfileViewController: UIViewController {
         addViews()
         threeDotsButton.addTarget(self, action: #selector(openEdit), for: .touchUpInside)
         rateButton.addTarget(self, action: #selector(didTappedRateReviewBtn), for: .touchUpInside)
+        shareButton.addTarget(self, action: #selector(doSomething), for: .touchUpInside)
         makeConstraints()
     }
     
     private func addViews() {
         view.addSubview(profileImageView)
         view.addSubview(usernameLabel)
+        view.addSubview(surnameLabel)
+        view.addSubview(userDescriptionLabel)
         view.addSubview(shareButton)
         view.addSubview(logoutButton)
         view.addSubview(threeDotsButton)
@@ -153,15 +238,27 @@ class ProfileViewController: UIViewController {
         usernameLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.height.equalTo(50)
-            make.width.equalToSuperview().inset(20)
             make.top.equalTo(profileImageView.snp.bottom).offset(10)
+        }
+        
+        surnameLabel.snp.makeConstraints { make in
+            make.leading.equalTo(usernameLabel.snp.trailing)
+            make.centerY.equalTo(usernameLabel.snp.centerY)
+            make.height.equalTo(50)
+        }
+        
+        userDescriptionLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.height.equalTo(50)
+            make.width.equalToSuperview().inset(20)
+            make.top.equalTo(usernameLabel.snp.bottom).offset(10)
         }
         
         shareButton.snp.makeConstraints { make in
             make.width.equalToSuperview().inset(20)
             make.height.equalTo(50)
             make.centerX.equalToSuperview()
-            make.top.equalTo(usernameLabel.snp.bottom).offset(20)
+            make.top.equalTo(userDescriptionLabel.snp.bottom).offset(20)
         }
         
         logoutButton.snp.makeConstraints { make in
@@ -210,8 +307,7 @@ class ProfileViewController: UIViewController {
     // MARK: - UI Configuration
     
     func configureUI() {
-        guard let post = post else { return }
-        usernameLabel.text = "\(post.userEmail)"
+        
     }
     
     // MARK: - Logout Button Setup
@@ -249,5 +345,42 @@ class ProfileViewController: UIViewController {
         let vc = ImageEditViewController()
         present(vc, animated: true)
     }
-     
+    
+    @objc func doSomething() {
+        if interstitial != nil {
+            interstitial?.present(fromRootViewController: self)
+          } else {
+            print("Ad wasn't ready")
+          }
+    }
+}
+
+extension ProfileViewController: GADBannerViewDelegate {
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+      bannerView.translatesAutoresizingMaskIntoConstraints = false
+      view.addSubview(bannerView)
+      view.addConstraints(
+        [NSLayoutConstraint(item: bannerView,
+                            attribute: .bottom,
+                            relatedBy: .equal,
+                            toItem: view.safeAreaLayoutGuide,
+                            attribute: .bottom,
+                            multiplier: 1,
+                            constant: 0),
+         NSLayoutConstraint(item: bannerView,
+                            attribute: .centerX,
+                            relatedBy: .equal,
+                            toItem: view,
+                            attribute: .centerX,
+                            multiplier: 1,
+                            constant: 0)
+        ])
+     }
+    
+    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+      // Add banner to view and add constraints as above.
+      addBannerViewToView(bannerView)
+    }
+    
 }

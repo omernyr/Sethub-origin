@@ -4,6 +4,8 @@ import WebKit
 import Lottie
 import AMPopTip
 import SafariServices
+import FirebaseStorage
+import Firebase
 
 enum EyeState {
     case close
@@ -14,12 +16,23 @@ enum EyeState {
     }
 }
 
+enum saveButtonState {
+    case tapped
+    case died
+    
+    mutating func toggle() {
+        self = (self == .tapped) ? .died : .tapped
+    }
+}
+
 class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIViewControllerTransitioningDelegate {
     
     // Variables
     var annotationCounter = 1
     var products: [ImageAnnotation] = []
+    var matchingProducts: [UploadedPost] = []
     var currentEyeState: EyeState = .open
+    var saveState: saveButtonState = .died
     
     var post: UploadedPost? {
         didSet {
@@ -148,7 +161,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     let eyeState: UIButton = {
         let iv = UIButton()
-        iv.contentMode = .scaleToFill
+        iv.contentMode = .scaleAspectFit
         iv.backgroundColor = .init(hexString: "7c7c7c")
         iv.layer.cornerRadius = 15
         iv.tintColor = .white
@@ -173,6 +186,10 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        print(matchingProducts)
+    }
+    
     // UI design configure
     private func setupUI() {
         view.backgroundColor = .init(hexString: "#fffffe")
@@ -186,6 +203,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func addTargets() {
         closePostVCButton.addTarget(self, action: #selector(dismissPage), for: .touchUpInside)
         eyeState.addTarget(self, action: #selector(handleEyeState), for: .touchUpInside)
+        savePostButton.addTarget(self, action: #selector(didTapSavePostButton), for: .touchUpInside)
     }
     
     public func addViews() {
@@ -239,6 +257,42 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
         }
     }
+    
+    @objc func didTapSavePostButton() {
+        // Enum değerini tersine çevir
+        saveState.toggle()
+        guard let post = post else { return }
+        
+        
+        // Enum değerine göre görüntüyü güncelle
+        if saveState == .tapped {
+            savePostButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+            
+            
+//            postRef.updateData(["isSaved" : true]) { err in
+//                if let error = err {
+//                    print(error.localizedDescription)
+//                } else {
+//                    print("SUCCESS!!!!!")
+//                }
+//            }
+            
+            self.fetchProductWithID(post.id, saveState: true)
+            
+        } else {
+            savePostButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
+//            postRef.updateData(["isSaved" : false]) { err in
+//                if let error = err {
+//                    print(error.localizedDescription)
+//                } else {
+//                    print("SUCCESS!!!!!")
+//                }
+//            }
+            self.fetchProductWithID(post.id, saveState: false)
+        }
+    }
+
+
     
     func addAnnotation() {
         // Eğer bir sayacı korumak istiyorsak, başka bir değişken tanımlayarak saklayabiliriz.
@@ -462,5 +516,99 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         popTip.show(customView: containerView, direction: .up, in: view, from: CGRect(x: annotationView.frame.minX, y: annotationView.frame.maxY+60,
                                                                                       width: annotationView.frame.width, height: annotationView.frame.height))
     }
+
+    // Firestore verilerini almak için bir fonksiyon
+    func fetchProductWithID(_ targetID: String, saveState: Bool) {
+//        let db = Firestore.firestore()
+//        let postRef = db.collection("uploadedPosts").document(targetID)
+        //        db.collection("uploadedPosts").whereField("id", isEqualTo: targetID).getDocuments { (querySnapshot, error) in
+        //            if let error = error {
+        //                print("Sorgu hatası: \(error.localizedDescription)")
+        //                return
+        //            }
+        //
+        //            guard let documents = querySnapshot?.documents else {
+        //                print("Firestore'dan hiçbir belge bulunamadı.")
+        //                return
+        //            }
+        //
+        //            // Eşleşen ürünleri işleyin
+        //            for document in documents {
+        //                let data = document.data()
+        //                if let imageURL = data["imageURL"] as? String,
+        //                   let email = data["userEmail"] as? String,
+        //                   let id = data["id"] as? String,
+        //                   let postDescription = data["postDescription"] as? String,
+        //                   let prodAnnotationsData = data["prodAnnotations"] as? [[String: Any]],
+        //                   let category = data["category"] as? String,
+        //                   let date = data["date"] as? Timestamp {
+        //
+        //                    var prodAnnotations: [ImageAnnotation] = []
+        //                    for annotationData in prodAnnotationsData {
+        //                        if let xPosition = annotationData["xPosition"] as? Double,
+        //                           let yPosition = annotationData["yPosition"] as? Double,
+        //                           let productData = annotationData["product"] as? [String: Any],
+        //                           let name = productData["name"] as? String,
+        //                           let description = productData["description"] as? String,
+        //                           let link = productData["link"] as? String {
+        //
+        //                            let product = Product(name: name, description: description, link: link)
+        //                            let annotation = ImageAnnotation(xPosition: xPosition, yPosition: yPosition, product: product)
+        //                            prodAnnotations.append(annotation)
+        //                        }
+        //                    }
+        //
+        //                    let uploadedPost = UploadedPost(userEmail: email, id: id, imageURL: imageURL,postDescription: postDescription, prodAnnotations: prodAnnotations,
+        //                                                    date: date.dateValue(), category: category, likes: 0, isLiked: false, isSaved: saveState)
+        //
+        //                    DispatchQueue.main.async {
+        //                        self.matchingProducts.append(uploadedPost)
+        //
+        //                    }
+        //
+        //                }
+        //            }
+        //        }
+        
+        guard let post = post else { return }
+        
+        let db = Firestore.firestore()
+        let postRef = db.collection("uploadedPosts")
+        
+        postRef.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Veriler alınırken hata oluştu: \(error)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let documentData = document.data()
+                    let documentID = document.documentID // Belgenin ID'sini alın
+                    // Belge verileri ile bir şeyler yapabilirsiniz.
+//                    print("Belge ID: \(documentID), Veriler: \(documentData)")
+                
+                    if let IDinPost = documentData["id"] as? String {
+                        // "name" alanına erişebilirsiniz
+                        if IDinPost == targetID {
+                            print("Belge ID: \(document.documentID), postun içindeki id: \(IDinPost)")
+                            postRef.document(document.documentID).updateData(["isSaved" : saveState]) { err in
+                                if let error = err {
+                                    print(error.localizedDescription)
+                                } else {
+                                    print("success ✅")
+                                }
+                            }
+                        }
+                        
+                    }
+                    
+                }
+            }
+        }
+        
+        
+    }
     
+    func removeProductWithID(_ targetID: String) {
+        matchingProducts.removeAll { $0.id == targetID }
+    }
+
 }

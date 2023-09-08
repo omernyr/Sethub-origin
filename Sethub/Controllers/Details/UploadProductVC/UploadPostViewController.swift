@@ -422,16 +422,21 @@ class UploadPostViewController: UIViewController, CustomProductAlertDelegate {
     func addUploadedPostToFirestore(imageURL: String, postDescription: String, annotations: [ImageAnnotation], userEmail: String, selectedCategoryIndex: Int) {
         // Firestore'da yeni bir koleksiyon belgesi oluştur
         let date = Date()
+        let id = UUID()
+        let uuidString = id.uuidString // UUID'yi dizeye dönüştürün
+
         var ref: DocumentReference? = nil
         let db = Firestore.firestore()
         ref = db.collection("uploadedPosts").addDocument(data: [
             "userEmail": userEmail, // Kullanıcının e-posta adresini ekle
+            "id": uuidString, // Kullanıcının e-posta adresini ekle
             "date": date,
             "imageURL": imageURL,
             "postDescription": postDescription,
             "category": categoriesWithEmojis[selectedCategoryIndex],
             "likes": 0,
             "isLiked": false,
+            "isSaved": false,
             "prodAnnotations": annotations.map { $0.dictionaryRepresentation }
         ]) { err in
             if let err = err {

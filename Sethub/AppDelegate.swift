@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseCore
 import FirebaseAuth
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Ana pencereyi oluşturun
         FirebaseApp.configure()
         window = UIWindow(frame: UIScreen.main.bounds)
-        
+        GADMobileAds.sharedInstance().start(completionHandler: nil )
         let rootViewController = CustomTabbarController()
         window?.rootViewController = rootViewController
 //        window?.rootViewController = UINavigationController(rootViewController: rootViewController)

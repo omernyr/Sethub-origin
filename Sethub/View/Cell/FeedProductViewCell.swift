@@ -41,7 +41,8 @@ class FeedProductViewCell: UITableViewCell{
     
     let postDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        label.font = UIFont.preferredFont(forTextStyle: .caption1)
+//        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         label.text = "Favori kombinim"
         label.textAlignment = .left
         label.textColor = .black
@@ -77,6 +78,7 @@ class FeedProductViewCell: UITableViewCell{
         label.backgroundColor = .clear
         label.textColor = .init(hexString: "#aaaaaa")
         label.clipsToBounds = true
+        label.textAlignment = .left
         label.isUserInteractionEnabled = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -172,7 +174,6 @@ class FeedProductViewCell: UITableViewCell{
         let postImageUrl = URL(string: post.imageURL)
         sharedDateLabel.text = post.date.formatted(date: .long, time: .omitted)
         categoryNameLabel2.text = "\(post.category)"
-        
         postImageView.sd_setImage(with: postImageUrl)
         
         if post.postDescription.count > 50 {
@@ -200,7 +201,7 @@ class FeedProductViewCell: UITableViewCell{
         contentView.addSubview(postDescriptionLabel)
         contentView.addSubview(userNameLabel)
         contentView.addSubview(userProfileImageview)
-        contentView.addSubview(threeDotsButton)
+//        contentView.addSubview(threeDotsButton)
         contentView.addSubview(likeButton)
         contentView.addSubview(categoryView)
         contentView.addSubview(shareButton)
@@ -282,9 +283,12 @@ class FeedProductViewCell: UITableViewCell{
         }
         
         sharedDateLabel.snp.makeConstraints { make in
+//            make.height.equalTo(20)
+//            make.top.equalTo(userNameLabel.snp.bottom)
+//            make.leading.equalTo(userNameLabel.snp.leading)
+            make.trailing.equalTo(postImageView.snp.trailing)
+            make.centerY.equalTo(userNameLabel.snp.centerY)
             make.height.equalTo(20)
-            make.top.equalTo(userNameLabel.snp.bottom)
-            make.leading.equalTo(userNameLabel.snp.leading)
         }
         
         bottomBlurView.snp.makeConstraints { make in
@@ -294,11 +298,11 @@ class FeedProductViewCell: UITableViewCell{
             make.bottom.equalToSuperview().inset(5)
         }
         
-        threeDotsButton.snp.makeConstraints { make in
-            make.trailing.equalTo(postImageView.snp.trailing)
-            make.centerY.equalTo(userNameLabel.snp.centerY)
-            make.width.height.equalTo(20)
-        }
+//        threeDotsButton.snp.makeConstraints { make in
+//            make.trailing.equalTo(postImageView.snp.trailing)
+//            make.centerY.equalTo(userNameLabel.snp.centerY)
+//            make.width.height.equalTo(20)
+//        }
         
         likeButton.snp.makeConstraints { make in
             make.leading.equalTo(postImageView.snp.leading)
