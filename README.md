@@ -17,7 +17,7 @@
 * Xib used for UI Design
 * Compatible with iOS 12.0+
 * Live Video
-  - ![gif](https://github.com/omernyr/Sethub-origin/assets/89137487/5fd0f1f3-1e7b-435c-a43f-b3861d371407)
+  - ![gif](https://github.com/omernyr/Sethub-origin/assets/89137487/dc7b8587-f087-48fc-be1a-d0a6833966b4)
 
  
 ## Screenshots
