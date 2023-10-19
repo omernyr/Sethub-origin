@@ -17,7 +17,7 @@
 * Programmatically used for UI Design
 * Compatible with iOS 15.0+
 * Live Video
-  - ![gif](https://github.com/omernyr/Sethub-origin/assets/89137487/dc7b8587-f087-48fc-be1a-d0a6833966b4)
+![output](https://github.com/omernyr/Sethub-origin/assets/89137487/a8574d8d-e63b-43f3-afa8-7d2be997c449)
 
  
 ## Screenshots
@@ -69,9 +69,6 @@ You can [download](https://github.com/omernyr/Sethub-origin) the latest installa
     <td><img src="https://img.shields.io/badge/IQKeyboardManager-298D46?style=for-the-badge&logoColor=white"/></td>
     <td><img src="https://img.shields.io/badge/moya-cf2f74?style=for-the-badge&logoColor=red"/></td>
     <td><img src="https://img.shields.io/badge/KingFisher-5091CD?style=for-the-badge&&logoColor=white"/></td>
-  </tr>
-  <tr>
-    <td><img src="https://img.shields.io/badge/Auto_Layout-fbc093?style=for-the-badge&logo=swift&logoColor=white"/></td>
   </tr>
 </table>
 
