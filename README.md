@@ -14,8 +14,8 @@
 * Singletone design
 * MVVM Design Pattern
 * Controllers and ViewModels connected with Delegate and Closure's
-* Xib used for UI Design
-* Compatible with iOS 12.0+
+* Programmatically used for UI Design
+* Compatible with iOS 15.0+
 * Live Video
   - ![gif](https://github.com/omernyr/Sethub-origin/assets/89137487/dc7b8587-f087-48fc-be1a-d0a6833966b4)
 
@@ -50,7 +50,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) instal
 
 ## Download
 
-You can [download](https://github.com/omernyr/PopcornPlay) the latest installable version of Calculator for macOS and Linux.
+You can [download](https://github.com/omernyr/Sethub-origin) the latest installable version of Calculator for macOS and Linux.
 
 ## Technologies Used
 
