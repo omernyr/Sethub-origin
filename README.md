@@ -17,7 +17,7 @@
 * Programmatically used for UI Design
 * Compatible with iOS 15.0+
 * Live Video
-![output](https://github.com/omernyr/Sethub-origin/assets/89137487/a8574d8d-e63b-43f3-afa8-7d2be997c449)
+ - ![output](https://github.com/omernyr/Sethub-origin/assets/89137487/a8574d8d-e63b-43f3-afa8-7d2be997c449)
 
  
 ## Screenshots
