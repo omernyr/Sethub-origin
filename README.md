@@ -26,9 +26,14 @@
 * Cross platform
   - iOS, macOS ready.
 
+- <img width="163" alt="1" src="https://github.com/omernyr/Sethub-origin/assets/89137487/353c9c0e-88be-402c-ad05-aa6030cab2a9"> <img width="163" alt="1" src="https://github.com/omernyr/Sethub-origin/assets/89137487/d629f00d-2d3e-4ce7-b2ed-4d6dd64c8b68"> <img width="163" alt="1" src="https://github.com/omernyr/Sethub-origin/assets/89137487/1bd82aef-bdc0-4de2-9d1e-c3b403e931c7"> <img width="163" alt="1" src="https://github.com/omernyr/Sethub-origin/assets/89137487/5819def0-77aa-407f-94bf-67080b5455db"> <img width="163" alt="1" src="https://github.com/omernyr/Sethub-origin/assets/89137487/5f12c70d-c7f0-4485-9212-eed7fa08ba38"> <img width="163" alt="1" src="https://github.com/omernyr/Sethub-origin/assets/89137487/0cb0844f-07c5-4a6d-a742-e236bfef9fae"> <img width="163" alt="1" src="https://github.com/omernyr/Sethub-origin/assets/89137487/fa7f7c1d-74c3-4983-9451-9b1d1f310e3e"> <img width="163" alt="1" src="https://github.com/omernyr/Sethub-origin/assets/89137487/abe892bf-3172-45df-ac67-d2fae91b5182"> <img width="163" alt="1" src="https://github.com/omernyr/Sethub-origin/assets/89137487/7f23e60f-dae5-440c-9dfe-1d509b6a57ed"> <img width="163" alt="1" src="https://github.com/omernyr/Sethub-origin/assets/89137487/6338b9e2-d830-49bf-ab26-676185feed51"> <img width="163" alt="1" src="https://github.com/omernyr/Sethub-origin/assets/89137487/4cb16b47-44b7-4465-8ac2-279b439a0131"> <img width="163" alt="1" src="https://github.com/omernyr/Sethub-origin/assets/89137487/2a4602d3-f5e2-42b5-9691-dc28be986faa">
+-   
 ## Screenshots
-- <img width="163" alt="1" src="https://github.com/omernyr/Sethub-origin/assets/89137487/353c9c0e-88be-402c-ad05-aa6030cab2a9"> <img width="163" alt="1" src="https://user-images.githubusercontent.com/89137487/234586643-54362796-6262-4f44-8b39-788b7f6a0dce.png"> 
-![login-page](https://github.com/omernyr/Sethub-origin/assets/89137487/353c9c0e-88be-402c-ad05-aa6030cab2a9)
+
+![go-to-product]()
+![post-page]()
+![notifications-page]()
+![review-page]()
 
  
 ## Installation
